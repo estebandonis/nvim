@@ -34,5 +34,20 @@ return {
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
         end
-    }
+    },
+    --[[{
+        cmp.setup.cmdline("/", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+                { name = "buffer" },
+            },
+        }),
+
+        cmp.setup.cmdline(":", {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+                { name = "cmdline" },
+            },
+        })
+    },--]]
 }
